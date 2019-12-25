@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/timg"
+    tools:context=".ui.main.TodoListFragment">
+
+    <TextView
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+
+        android:layout_width="272dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        app:layout_marginTopPercent="11%"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="vertical"
+        android:text="您的待办事项"
+        android:textColor="@android:color/white"/>
+
+    <LinearLayout
+        app:layout_marginTopPercent="22%"
+        android:layout_gravity="center_horizontal"
+        app:layout_widthPercent="75%"
+        app:layout_heightPercent="60%"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        >
+        <ListView
+            android:id="@+id/todoLv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="MissingConstraints">
+        </ListView>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_margin="25dp"
+        android:background="@mipmap/add"
+        >
+
+    </Button>
+
+
+</android.support.percent.PercentFrameLayout>

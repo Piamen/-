@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">👴来🌶</string>
+    <string name="tab_text_1">待办列表</string>
+    <string name="tab_text_2">地图</string>
+    <string name="sdk_key">K3KBZ-LPOCW-LULRK-RX75U-GAGAJ-GYBC7</string>
+    <string name="map_region">北京</string>
+</resources>

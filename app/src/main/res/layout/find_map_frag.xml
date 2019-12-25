@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapMainActivity">
+
+    <fragment
+        android:id="@+id/map_frag"
+        android:name="tencentmap"
+        class="com.tencent.tencentmap.mapsdk.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginBottom="131dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--SATELLITE按钮-->
+    <Button
+        android:id="@+id/btn_stlmp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="65dp"
+        android:text="SATELLITE"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <!--TRAFFIC按钮-->
+    <Button
+        android:id="@+id/btn_trfmp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="TRAFFIC"
+        android:textSize="12sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <!--DEST输入框-->
+    <EditText
+        android:id="@+id/et_dest"
+        android:layout_width="135dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/wei_editbox_theme"
+        android:ems="10"
+        android:hint="Type your destination"
+        android:inputType="textPersonName"
+        android:maxLength="40"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/map_frag" />
+
+    <!--SEARCH按钮-->
+
+    <TextView
+        android:id="@+id/mStatus"
+
+        android:layout_width="279dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_trfmp"
+        app:layout_constraintEnd_toEndOf="@+id/map_frag"
+        app:layout_constraintStart_toEndOf="@+id/btn_stlmp"
+        app:layout_constraintTop_toTopOf="@+id/btn_stlmp" />
+
+    <Button
+        android:id="@+id/btn_srch"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/wei_editbox_theme"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/et_dest"
+        app:layout_constraintStart_toEndOf="@+id/et_dest"
+        app:layout_constraintTop_toTopOf="@+id/et_dest"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ListView
+        android:id="@+id/mlist"
+        android:layout_width="357dp"
+        android:layout_height="315dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/wei_editbox_theme"
+        app:layout_constraintStart_toStartOf="@+id/et_dest"
+        app:layout_constraintTop_toBottomOf="@+id/et_dest" />
+
+
+</LinearLayout>
